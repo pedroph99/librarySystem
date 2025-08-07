@@ -1,0 +1,99 @@
+# # # Arquivo .gitignore para projetos Python # # #
+
+# 1. Ambientes Virtuais
+# Nunca envie seu ambiente virtual para o repositório.
+# Ele contém dependências que podem ser reinstaladas a partir de 'requirements.txt' ou 'pyproject.toml'.
+/venv/
+/env/
+/.venv/
+/.env/
+/env.bak/
+/venv.bak/
+
+# 2. Cache e Bytecode do Python
+# Arquivos gerados automaticamente pelo interpretador Python.
+/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyz
+*.pyw
+*.pyzw
+
+# 3. Arquivos de Distribuição / Build
+# Arquivos gerados ao empacotar seu projeto para distribuição.
+/build/
+/dist/
+/sdist/
+/wheels/
+*.egg-info/
+*.egg
+*.whl
+
+# 4. Arquivos de Configuração de IDEs e Editores
+# Evita que as configurações pessoais do seu editor sejam enviadas.
+/.idea/          # PyCharm
+/.vscode/        # Visual Studio Code
+*.sublime-project
+*.sublime-workspace
+.project
+.pydevproject
+.settings/
+*.nbinfo
+
+# 5. Arquivos de Sistema Operacional
+# Arquivos de metadados específicos de cada sistema.
+.DS_Store       # macOS
+Thumbs.db       # Windows
+ehthumbs.db     # Windows
+Desktop.ini     # Windows
+
+# 6. Arquivos de Testes e Cobertura de Código
+# Relatórios e caches gerados por ferramentas de teste.
+.pytest_cache/
+.coverage
+.coverage.*
+/htmlcov/
+nosetests.xml
+coverage.xml
+pytest-report.html
+/pytest-html-report/
+
+# 7. Arquivos de Log
+# Nunca versione arquivos de log, pois eles mudam constantemente.
+*.log
+logs/
+
+# 8. Notebooks Jupyter
+# Checkpoints gerados automaticamente pelo Jupyter.
+.ipynb_checkpoints/
+
+# 9. Documentação
+# Arquivos gerados por ferramentas de documentação como Sphinx ou MkDocs.
+/_build/
+/site/
+
+# 10. SEGURANÇA: Arquivos de Segredos e Variáveis de Ambiente
+# NUNCA versione arquivos que contenham senhas, chaves de API, etc.
+# É uma prática comum ter um arquivo .env para variáveis locais.
+.env
+*.env
+*.env.*
+# Exceção: Permita arquivos de exemplo para guiar outros desenvolvedores.
+# O '!' nega o padrão anterior.
+!*.env.example
+!*.env.template
+
+# Arquivos de segredos comuns
+secrets.json
+secrets.yaml
+secrets.yml
+*.ini
+*.cfg
+# Descomente as linhas acima com cuidado se seus arquivos .ini ou .cfg não contiverem segredos.
+
+# 11. Arquivos de Banco de Dados
+# Bancos de dados locais como SQLite.
+*.sqlite3
+*.db
+*.db3
